@@ -1,0 +1,152 @@
+.combo {
+    max-width: 1400px;
+    background-color:#f2f2f2;
+    margin: 0 auto;
+
+    @media (max-width: $breakpoint-md) {
+        height: 1700px;
+    }
+
+    @media (max-width: $breakpoint-xs) {
+        height: 1500px;
+    }
+
+}
+
+.combo-block {
+    background-color: $light-gray-3;
+    max-width: 1110px;
+}
+
+.combo-container {
+    margin: 0 auto;
+    position: relative;
+    left:120px;
+    height: auto;
+
+    @media (max-width: $breakpoint-md) {
+        height:1700px;
+    }
+
+    @media (max-width: $breakpoint-sm) {
+        left:0;
+    }
+}
+
+.card-wrapper {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1140px;
+    position: relative; 
+   
+
+    @media (max-width: $breakpoint-xl) {
+        max-width: 800px;
+    }
+
+    @media (max-width: $breakpoint-md) {
+        max-width: 600px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+   
+    &::after {
+        content: '';
+        position: absolute;  
+        top: 250px;  
+        left: 105%;
+        display: block;
+        width: 60px;
+        height: 60px;
+        background-image: url(/img/btn-slider.svg); 
+
+        @media (max-width: $breakpoint-lg) {
+            top: -15%;  
+            left: 45%;
+        }
+
+        @media (max-width: $breakpoint-md) {
+            top: 101%;  
+            left: 45%;
+        }
+    }
+}
+
+.card-wrapper:hover::after{
+    transform: scale(1.2)
+}
+
+.card {
+    max-width: 360px;
+    text-align: center;
+    box-shadow: 0 10px 10px 0 #eee;
+    flex:1 1 33.33%;
+        
+    & + & {
+        margin-left: 20px;
+    }
+
+    @media (max-width: $breakpoint-xl) {
+        max-width: 350px;
+    }
+
+    @media (max-width: $breakpoint-xs) {
+        max-width: 225px;
+    }
+}
+
+.card-info {
+    padding: 47px 44px;
+
+    @media (max-width: $breakpoint-xl) {
+        padding: 20px 20px;
+    }
+
+    @media (max-width: $breakpoint-md) {
+        padding: 10px 10px;
+    }
+}
+
+.card__img {
+    position: relative;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    margin-bottom: 65px;
+
+    img {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: auto;
+    }
+}
+
+.card__price-wrp {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    
+    @media (max-width: $breakpoint-md) {
+        justify-content: space-between;
+        height: 70px;
+        padding: 20px 20px;
+    }
+}
+
+.card__price {
+    margin-right: 20px;
+}
+
+.card__old {
+    text-decoration: line-through;
+    font-size: $fs-14;
+    font-style: italic;
+}
+
+.card__description {
+    margin-bottom: 20px;
+}
+
+
+

@@ -1,0 +1,192 @@
+.coffee {
+    height: 894px;
+
+    @media (max-width: $breakpoint-lg) {
+        height:1420px;
+    }
+
+    @media (max-width: $breakpoint-xs) {
+        height:2200px;
+    }
+   
+
+    &-wrapper-flex {
+        display: flex;
+        flex-wrap: wrap;
+        position: relative;
+        max-width: 1205px;
+        margin: 0 auto;
+    }
+
+    &-aside {
+        flex:0 0 28%;
+        max-width: 384px;
+        height: 894px;
+        background-color: $primary-color;
+
+        @media (max-width: $breakpoint-xxl) {
+            max-width: 300px;
+        }
+
+        @media (max-width: $breakpoint-lg) {
+            height: 1420px;
+        }
+
+        @media (max-width: $breakpoint-sm) {
+            max-width: 200px;
+        }
+    }
+
+    &-sidebar {
+        flex:0 0 72%;
+        background-color: $light-gray-3;
+
+        @media (max-width: $breakpoint-xl) {
+            flex:0 0 60%;
+        }
+    }
+}
+
+.header-complex {
+
+    &__subtitle {
+        margin-bottom: 5px;
+    }
+
+    &__title {
+        margin: 0;
+        margin-bottom: 70px;
+
+        @media (max-width: $breakpoint-xs) {
+           margin-bottom: 20px;
+        }
+    }
+}
+
+.coffee-slider {
+ 
+    position: absolute;
+    top: 200px;
+    left: 125px;
+    z-index: 200;
+
+    @media (max-width: $breakpoint-xl) {
+        left: 90px;
+    }
+
+    @media (max-width: $breakpoint-lg) {
+        left: 150px;
+    }
+
+    @media (max-width: $breakpoint-md) {
+        left: 90px;
+    }
+}
+
+.product-card {
+
+    &__list-grid {
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-gap: 30px;
+
+        @media (max-width: $breakpoint-lg) {
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(4, 1fr);
+            grid-gap: 40px;
+        }
+
+        @media (max-width: $breakpoint-sm) {
+            left: -40px;
+        }
+       
+        &::after {
+            content: '';
+            position: absolute;
+            top: 40%;
+            left: 105%;
+            display: block;
+            width: 60px;
+            height: 60px;
+            background-image: url(/img/btn-slider.svg); 
+
+            @media (max-width: $breakpoint-xxl) {
+                top: 105%;
+                left: 50%;
+            }
+
+            @media (max-width: $breakpoint-lg) {
+                top: 46%;
+                left: 110%;
+            }
+
+            @media (max-width: $breakpoint-sm) {
+                top: -8%;
+                left: 50%;
+            }
+
+            @media (max-width: $breakpoint-xs) {
+                top: 101%;
+                left: 41%;
+            }
+        }
+    }
+
+    &__item {
+        display: flex;
+        box-shadow: 0 10px 10px 0 #999;
+
+        @media (max-width: $breakpoint-sm) {
+            flex-direction: column;
+        }
+    }
+
+    &__img {
+        object-fit: cover;
+    }  
+
+    &__desc {
+        text-align: center;
+        padding: 40px;
+        background-color: #fff;
+
+        @media (max-width: $breakpoint-xl) {
+            padding: 20px;
+        }
+
+        @media (max-width: $breakpoint-sm) {
+            padding: 20px 0 0 0 ;
+        }
+    }
+
+    &__name {
+        margin-bottom: 10px;
+    }
+
+    &__description {
+        margin-bottom: 10px;
+    }
+
+    &__btn-group {
+        display: flex;
+        justify-content: space-between;
+
+        @media (max-width: $breakpoint-sm) {
+            flex-direction: column;
+            justify-content: center;
+            padding-left: 20px;
+            align-items: center;
+
+        }
+
+        @media (max-width: $breakpoint-xs) {
+            align-items: center;
+        }
+    }
+}
+
+.product-card__list-grid:hover::after{
+    transform: scale(1.2)
+}

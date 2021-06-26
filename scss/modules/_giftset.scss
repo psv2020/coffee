@@ -1,0 +1,205 @@
+.giftset {
+    max-width: 1400px;
+    height: 800px;
+    background-color:$light-gray;
+    padding-top: 20px;
+    margin: 0 auto;
+
+    @media (max-width: $breakpoint-sm) {
+        height: 830px;
+    }
+
+    @media (max-width: $breakpoint-xs) {
+        height: 725px;
+    }
+  
+}
+
+.giftset-container {
+    margin: 0 auto;
+    max-width: 1110px;
+    position: relative;
+}
+
+.giftset__subtitle {
+    margin-bottom: 10px;
+}
+
+.giftset-card {
+    position: relative;
+}
+
+.giftset-card-block {
+    padding: 70px 70px 70px 300px;
+
+    @media (max-width: $breakpoint-sm) {
+        padding: 30px 30px 10px 280px;
+    }
+
+    @media (max-width: $breakpoint-xs) {
+        padding-top: 170px; 
+        padding-left: 30px;
+    }
+}
+
+.giftset-card__img {
+    position: absolute;
+    top: 220px;
+    left: 20px;
+    z-index: 200;
+    width: 460px;
+
+    @media (max-width: $breakpoint-lg) {
+        top: 40%;
+        left: 0;
+        width: 370px;
+    }
+
+    @media (max-width: $breakpoint-md) {
+        top: 40%;
+        left: 0;
+        width: 290px;
+    }
+
+    @media (max-width: $breakpoint-sm) {
+        top: 40%;
+        left: 0;
+        width: 200px;
+    }
+
+    @media (max-width: $breakpoint-xs) {
+        top: 17%;
+        left: 4%;
+        width: 190px;
+    }
+}
+
+.giftset-card__img img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.giftset-card__desc-item {
+    display: flex;
+    background-color: $color-white;
+    max-width: 794px;
+}
+
+.giftset-card__price {
+    margin-bottom: 20px;
+
+    @media (max-width: $breakpoint-sm) {
+        margin-bottom: 10px;
+    }
+ 
+}
+
+.giftset-card__name {
+    margin-bottom: 20px;
+
+    @media (max-width: $breakpoint-xs) {
+        font-size: $fs-16;
+    }
+}
+
+.giftset-card__description {
+    margin-bottom: 20px;
+
+    @media (max-width: $breakpoint-xs) {
+       
+       font-size: 10px;
+    }
+
+
+}
+
+.sort-desciption-wrp {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    margin-bottom: 20px;
+    
+    span {
+        font-weight: $fw-semibold;
+    }
+}
+
+.sort-wrp {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.sort {
+    text-align: left;
+
+    @media (max-width: $breakpoint-xs) {
+        font-size: 12px;
+    }
+}
+
+.place-wrp {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.place {
+    text-align: left;
+
+    @media (max-width: $breakpoint-xs) {
+        font-size: 12px;
+    }
+}
+
+.giftset-card__desc-wrp {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.giftset-tabs {
+    display: flex;
+    flex-direction: column;
+        
+    &__item {
+        @include Montserrat();
+
+        padding: 68px 40px;
+        font-size: $fs-30;
+        font-weight: $fw-black;
+        background-color: $light-gray;
+        color: #B9C0CB;
+
+        span {
+            position: relative;
+            z-index: 2;
+        }
+    }
+    
+    &__item-active {
+        background-color: #fff;
+        color: $primary-color;
+    }
+}
+
+.tabs {
+    display: flex;
+    height: 460px;
+}
+
+// для jquery - табов
+
+.tabs-content__item{
+    display: none;
+}  
+
+.tabs-content__item--active {
+    display: block;
+}
+
+.tabs-triggers__item--active {
+    background-color: #fff;
+    color: $primary-color;
+}
+

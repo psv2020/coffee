@@ -1,0 +1,138 @@
+@import "../abstract/variables.css";
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    // min-height: 100vh;
+}
+
+body {
+    @include nunito();
+        
+    min-width: 320px;
+    font-size: $fs-16;
+    font-weight: $fw-light;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: none;
+    }
+    &:focus {
+        text-decoration: none;
+        outline: none;
+    }
+}
+
+img {
+    display: block;
+    object-fit: cover;
+}
+
+button {
+    outline: none;
+}
+
+h2 {
+    @include Montserrat();
+
+    text-align: left;
+    text-transform: uppercase;
+    font-size: $fs-54;
+    line-height: $lh;
+    color: $primary-color;
+
+}
+
+.subtitle {
+    text-align: center;
+    font-size: $fs-20;
+    font-weight: $fw-semibold;
+
+    @media (max-width: $breakpoint-xs) {
+        font-size: $fs-16;
+    }
+}
+
+.title {
+    @include Montserrat();
+
+    text-align: center;
+    font-size: $fs-30;
+    font-weight: $fw-black;
+
+    @media (max-width: $breakpoint-xs) {
+        font-size: $fs-24;
+        margin-bottom: 0;
+    }
+}
+
+.price {
+    color: $secondary-color;
+    font-size: $fs-20;
+    font-weight: $fw-semibold;
+}
+
+.name {
+    color: $light-gray-2;
+    font-size: $fs-24;
+    font-weight: $fw-bold;
+    line-height: $lh;
+
+    @media (max-width: $breakpoint-xs) {
+        font-size: $fs-20;
+        line-height: 1;
+        margin-bottom: 10px;
+    }
+}
+
+.description {
+    line-height: $lh;
+
+    @media (max-width: $breakpoint-xs) {
+        font-size: $fs-14;
+        line-height: 1;
+    }
+}
+
+.btn-first {
+    width: 134px;
+    height: 32px;
+    border: none;
+    border-radius: 19px;
+    text-transform: uppercase;
+    color: $color-white;
+    background-color: $secondary-color;
+
+    &:hover {
+        background-color: lighten($secondary-color, 10%);
+    }
+}
+
+.btn-second {
+    width: 110px;
+    height: 32px;
+    border: none;
+    border-radius: 19px;
+    text-transform: uppercase;
+    color: $primary-color;
+    background-color: #fff;
+
+    &:hover {
+        color: darken($primary-color, 90%);
+    }
+}

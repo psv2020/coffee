@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Nunito:ital,wght@0,400;0,600;0,700;1,300&display=swap');
+
+@mixin Montserrat {
+    font-family: 'Montserrat', sans-serif;
+}
+
+@mixin nunito {
+    font-family: 'Nunito', sans-serif;
+}
+
+$base-5: 5px;
+
+$fw-light: 300;
+$fw-regular: 400; 
+$fw-semibold: 600;
+$fw-bold: 700;
+$fw-black: 900;
+
+$lh: 1.5;
+
+$fs-14: 14px;
+$fs-16: 16px;
+$fs-20: 20px;
+$fs-24: 24px;  
+$fs-30: 30px; 
+$fs-54: 54px;  
+
+$color-white: #fff;
+$color-black: #000;
+$primary-color: #415167;
+$secondary-color: #C7A17A;
+$dark-gray: #151D28;
+$light-gray: #EDF0F5;
+$light-gray-2: #232C38;
+$light-gray-3: #F9FBFF;
+
+$transition: .2s ease-in-out;
+
+$breakpoint-xxl: 1400px;
+$breakpoint-xl: 1200px;
+$breakpoint-lg: 992px;
+$breakpoint-md: 768px;
+$breakpoint-sm: 576px;
+$breakpoint-xs: 320px;

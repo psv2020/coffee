@@ -1,0 +1,83 @@
+.features-wrapper {
+    margin: 0 auto;
+    max-width: 1190px;
+    height: 380px;
+    margin-bottom: 50px;
+
+    @media (max-width: $breakpoint-md) {
+        height: 650px;
+    }
+
+    @media (max-width: $breakpoint-xs) {
+       height: auto;
+    }
+}
+
+.features__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    @media (max-width: $breakpoint-xl) {
+        justify-content: space-around;
+    }
+}  
+
+.subtitle{
+   text-align: center;
+   font-size: $fs-20;
+   font-weight: $fw-semibold;
+   margin-bottom: 5px;
+}
+
+.features-title{
+    @include Montserrat();
+
+    text-align: center;
+    font-size: $fs-30;
+    font-weight: $fw-black;
+    margin: 0;
+    margin-bottom: 70px;
+    
+    @media (max-width: $breakpoint-sm) {
+        margin-bottom: 50px;
+    }
+
+    @media (max-width: $breakpoint-xs) {
+        margin-bottom: 0;
+    }
+}
+
+.features__item {
+    max-width: 225px;
+    text-align: center;
+
+    @media (max-width: $breakpoint-md) {
+        padding: 20px;
+    }
+
+    &-title {
+        font-size: $fs-24;
+        font-weight: $fw-bold;
+
+        @media (max-width: $breakpoint-md) {
+            line-height: 0.1;
+        }
+    }
+
+    &-icon {
+        
+        & img {
+            margin: 0 auto;
+        }
+    }
+
+    &-text {
+
+        @media (max-width: $breakpoint-lg) {
+            font-size: $fs-14;
+        }
+    }
+}
